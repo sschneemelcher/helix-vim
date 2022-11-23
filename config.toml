@@ -14,6 +14,7 @@ o = ["open_below", "normal_mode"]
 O = ["open_above", "normal_mode"]
 
 # Muscle memory
+"{" = ["goto_prev_paragraph", "collapse_selection", "align_view_center"]
 "}" = ["goto_next_paragraph", "collapse_selection"]
 0 = "goto_line_start"
 "$" = "goto_line_end"
@@ -120,7 +121,6 @@ C-a = ["append_mode", "collapse_selection"]
 k = ["extend_line_up", "extend_to_line_bounds"]
 j = ["extend_line_down", "extend_to_line_bounds"]
 
-# Clipboards over registers ye ye
 d = ["yank", "delete_selection"]
 x = ["yank", "delete_selection"]
 y = ["yank", "normal_mode", "flip_selections", "collapse_selection"]
