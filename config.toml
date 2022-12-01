@@ -9,6 +9,7 @@ C-h = "select_prev_sibling"
 C-j = "shrink_selection"
 C-k = "expand_selection"
 C-l = "select_next_sibling"
+C-q = [":w", "suspend"]
 
 # Personal preference
 o = ["open_below", "normal_mode"]
@@ -22,7 +23,7 @@ O = ["open_above", "normal_mode"]
 "^" = "goto_first_nonwhitespace"
 G = "goto_file_end"
 "%" = "match_brackets"
-V = ["select_mode", "extend_to_line_end"]
+V = ["select_mode", "extend_to_line_bounds"]
 C = ["extend_to_line_end", "yank", "delete_selection", "insert_mode"]
 D = ["extend_to_line_end", "yank", "delete_selection"]
 S = "surround_add" # Would be nice to be able to do something after this but it isn't chainable
@@ -82,6 +83,7 @@ b = ["move_prev_word_start", "yank", "delete_selection"]
 B = ["move_prev_long_word_start", "yank", "delete_selection"]
 g = { g = ["select_mode", "extend_to_line_bounds", "goto_file_start", "extend_to_line_bounds", "yank", "delete_selection", "normal_mode"] }
 0 = ["select_mode", "goto_line_start", "yank", "delete_selection", "normal_mode"]
+"$" = ["select_mode", "goto_line_end", "yank", "delete_selection", "normal_mode"]
 
 [keys.normal.y]
 y = ["extend_to_line_bounds", "yank", "normal_mode", "collapse_selection"]
@@ -95,6 +97,8 @@ W = ["move_next_long_word_start", "yank", "collapse_selection", "normal_mode"]
 b = ["move_prev_word_start", "yank", "collapse_selection", "normal_mode"]
 B = ["move_prev_long_word_start", "yank", "collapse_selection", "normal_mode"]
 g = { g = ["select_mode", "extend_to_line_bounds", "goto_file_start", "extend_to_line_bounds", "yank", "collapse_selection", "normal_mode"] }
+0 = ["select_mode", "goto_line_start", "yank", "collapse_selection", "normal_mode"]
+"$" = ["select_mode", "goto_line_end", "yank", "collapse_selection", "normal_mode"]
 
 [keys.normal.c]
 c = ["select_mode", "extend_to_line_bounds", "change_selection"]
@@ -103,6 +107,8 @@ w = ["move_next_word_start", "change_selection"]
 W = ["move_next_long_word_start", "change_selection"]
 b = ["move_prev_word_start", "change_selection"]
 B = ["move_prev_long_word_start", "change_selection"]
+0 = ["select_mode", "goto_line_start", "change_selection"]
+"$" = ["select_mode", "goto_line_end", "change_selection"]
 
 [keys.insert]
 # Escape the madness! No more fighting with the cursor! Or with multiple cursors!
