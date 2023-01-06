@@ -2,14 +2,17 @@
 # Quick iteration on config changes
 # C-o = ":config-open"
 # C-r = ":config-reload"
-C-p = "file_picker"
+C-p = "file_picker_in_current_directory"
 
 # Some nice Helix stuff
 C-h = "select_prev_sibling"
-C-j = "shrink_selection"
-C-k = "expand_selection"
 C-l = "select_next_sibling"
 C-q = [":w", "suspend"]
+
+# Move lines up and down
+C-k = ["select_mode", "extend_to_line_bounds", "yank", "delete_selection", "normal_mode", "move_line_up", "move_line_up", "paste_after"]
+C-j = ["select_mode", "extend_to_line_bounds", "yank", "delete_selection", "normal_mode", "paste_after"]
+
 
 # Personal preference
 o = ["open_below", "normal_mode"]
@@ -32,7 +35,6 @@ S = "surround_add" # Would be nice to be able to do something after this but it 
 n = ["search_next", "move_prev_word_start", "collapse_selection"]
 N = ["search_prev", "move_prev_word_start", "collapse_selection"]
 
-# Clipboards over registers ye ye
 x = "delete_selection"
 p = ["paste_after", "collapse_selection"]
 P = ["paste_before", "collapse_selection"]
