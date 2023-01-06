@@ -10,7 +10,7 @@ C-l = "select_next_sibling"
 C-q = [":w", "suspend"]
 
 # Move lines up and down
-C-k = ["select_mode", "extend_to_line_bounds", "yank", "delete_selection", "normal_mode", "move_line_up", "move_line_up", "paste_after"]
+C-k = ["select_mode", "extend_to_line_bounds", "yank", "delete_selection", "normal_mode", "move_line_up", "paste_before"]
 C-j = ["select_mode", "extend_to_line_bounds", "yank", "delete_selection", "normal_mode", "paste_after"]
 
 
